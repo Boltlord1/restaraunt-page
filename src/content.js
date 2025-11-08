@@ -5,9 +5,11 @@ export default class Content {
         for (let i = 0; i < num; i++) this.sections.push({children: []})
     }
 
-    format(index, array) {
+    format(index, array, clss) {
         if (index >= this.sections.length) return console.log('No element found.')
         this.sections[index].parent = document.createElement('div')
+        this.sections[index].parent.classList.add('section')
+        if (clss) this.sections[index].parent.classList.add(clss)
         for (let i = 0; i < array.length; i++) {
             this.sections[index].children.push(document.createElement(array[i]))
             this.sections[index].parent.appendChild(this.sections[index].children[i])

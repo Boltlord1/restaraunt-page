@@ -1,13 +1,13 @@
 import Content from './content.js'
 
 const home = new Content(4)
-home.format(0, ['h1', 'p'])
-home.format(1, ['p', 'p', 'h2'])
+home.format(0, ['h1', 'p'], 'title')
+home.format(1, ['p', 'p', 'h2'], 'review')
 home.format(2, ['h2', 'p', 'p'])
 home.format(3, ['h2', 'p'])
 home.fill(0, 0, 'Restaraunt Name')
 home.fill(0, 1, 'We make good ass food!')
-home.fill(1, 0, 'But don\'t take our word for it, here\'s a review')
+home.fill(1, 0, 'But don\'t take our word for it, here\'s a review:')
 home.fill(1, 1, '"Indeed, Restaraunt does make good ass food"')
 home.fill(1, 2, '- Reviewer')
 home.fill(2, 0, 'Timings')
